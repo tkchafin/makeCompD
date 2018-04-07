@@ -49,5 +49,23 @@ Users should provide an input file containing a population-wise summary of the D
 
 Individuals will be selected for each population, for all combinations available in the 'tests' file (e.g. for every possible set of P1, P2, P3, and P4 populations provided). These will be selected randomly, or you can provide a file of positive weights (e.g. number of loci present for each sample) using the <-w,--weights> flag. Change the number of samples selected per population using the <-m/--max> flag. Warning: Increasing this number exponentially increases the number of D-computations which will be performed! makeCompD.py will calculate the number of requested combinations and report it to you. For large numbers of tests, use the MPI-version of Steve's program (https://github.com/smussmann82/Comp-D_MPI). 
 
+Running the weighted sampler on the provided example files creates 12 ".compd" files which can be used as inputs to Comp-D:
+uaf90168:makeCompD tkchafin$ ./makeCompD.py -p example.popmap -i example.tests -m 2 -w example.weights 
+
+	Parsing popmap file...
+		Found 8 different populations and 29 individuals!
+
+	Parsing input tests file...
+		4 lines found in example.tests! Looks like you are doing the 4-taxon D-test?
+		Calculated a total of 12 separate D-tests! Will write 12 files ending with compd!
+	Found a file containing individual weights! Parsing', 'example.weights'
+		Found 34 samples with weight data. Any samples missing data will not be selected.
+
+	Building individual Comp-D test files...
+		2 samples with highest weight from example.weights will be chosen per population
+		Working on 12 tests...
+		Successfully wrote 12 test files, with an average of 16 replicates per test!
+		Done!
+
 No citation or acknowledgement required for use of the makeCompD script- however, if you use the Comp-D program, be sure to cite it appropriately. 
 
