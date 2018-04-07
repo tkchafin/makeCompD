@@ -3,7 +3,7 @@ Makes large number of test files for Steve Mussmann's Comp-D d-statistic program
 
 ## Usage
 Requires Python3. View the running options by calling the executable using the <-h/--help> flag:
-````./makeCompD.py -h
+~~~./makeCompD.py -h
 
 Exiting because help menu was called.
 
@@ -41,4 +41,4 @@ Description: Creates input test files for Comp-D (https://github.com/smussmann82
 		P1A P1B
 
 	#Order follows that of Comp-D
-	#Pop IDs will be used to create CompD infiles for all combinations````
+	#Pop IDs will be used to create CompD infiles for all combinations~~~
