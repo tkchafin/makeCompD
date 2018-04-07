@@ -16,22 +16,22 @@ Usage:  ./makeCompD.py -p </path/to/popmap> -i </path/to/infile> <-s /path/to/st
 Description: Creates input test files for Comp-D (https://github.com/smussmann82/Comp-D_MPI)
 
 	Arguments:
-		-p,\--popmap	: Path to tab-delimited population map
+		-p,--popmap	: Path to tab-delimited population map
 			-Assumes that all sampled in popmap can be used for CompD tests
-		-i,\--infile	: Prefix for input file
+		-i,--infile	: Prefix for input file
 			Using format of CompD, but with Population IDs from the popmap file
-		-w,\--weights	: Optional. File containing individual weights
-			-Should be formatted as sampleName \\t weight
+		-w,--weights	: Optional. File containing individual weights
+			-Should be formatted as sampleName \t weight
 			-Samples with highest weight are chosen. For example, this could be
 			 provided as number of loci present. Samples with most loci will be selected
 			-Samples missing from weights file will be assigned weights of 0
-		-m,\--max	: Maximum individuals to sample per populations <default=10>
+		-m,--max	: Maximum individuals to sample per populations <default=10>
 			-If used without <-s>, samples will be randomly chosen
 			-If used with <-s>, x samples with highest weight are chosen
-		-o,\--out	: Suffix for output file
+		-o,--out	: Suffix for output file
 			-Prefix will be formatted as: O+P3+P2+P1.$out for 4-taxon test
-			-\$out be default is 'compd'
-		-h,\--help	: Displays help menu
+			-$out be default is 'compd'
+		-h,--help	: Displays help menu
 
 
 	Infile format:
