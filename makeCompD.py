@@ -243,6 +243,8 @@ def parsePopmap(popmap):
 						continue
 					else:
 						stuff = line.split()
+						if len(stuff) != 2:
+							continue
 						ret[stuff[0]] = stuff[1]
 				return(ret)
 			except IOError:
