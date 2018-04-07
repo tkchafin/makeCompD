@@ -1,3 +1,4 @@
+MD_EXTENSIONS = ['codehilite(css_class=highlight, guess_lang=False)', 'extra']
 # makeCompD
 Makes large number of test files for Steve Mussmann's Comp-D d-statistic program: https://github.com/smussmann82/Comp-D_MPI. Can randomly select individuals, or use provided weights file. 
 
