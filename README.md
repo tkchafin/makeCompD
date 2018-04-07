@@ -1,4 +1,3 @@
-MD_EXTENSIONS = ['codehilite(css_class=highlight, guess_lang=False)', 'extra']
 # makeCompD
 Makes large number of test files for Steve Mussmann's Comp-D d-statistic program: https://github.com/smussmann82/Comp-D_MPI. Can randomly select individuals, or use provided weights file. 
 
@@ -50,3 +49,4 @@ Users should provide an input file containing a population-wise summary of the D
 Individuals will be selected for each population, for all combinations available in the 'tests' file (e.g. for every possible set of P1, P2, P3, and P4 populations provided). These will be selected randomly, or you can provide a file of positive weights (e.g. number of loci present for each sample) using the <-w,--weights> flag. Change the number of samples selected per population using the <-m/--max> flag. Warning: Increasing this number exponentially increases the number of D-computations which will be performed! makeCompD.py will calculate the number of requested combinations and report it to you. For large numbers of tests, use the MPI-version of Steve's program (https://github.com/smussmann82/Comp-D_MPI). 
 
 No citation or acknowledgement required for use of the makeCompD script- however, if you use the Comp-D program, be sure to cite it appropriately. 
+MD_EXTENSIONS = ['codehilite(css_class=highlight, guess_lang=False)', 'extra']
