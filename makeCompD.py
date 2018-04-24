@@ -72,7 +72,13 @@ def main():
 			chosen_inds= list() #list of lists will hold output samples
 			#For each pop, grab individuals
 			passed = True
+			seen = list()
 			for pop in t:
+				if pop in seen:
+					passed = False
+					continue
+				else:
+					seen.append(pop)
 				if outname:
 					outname = outname + "+" + pop
 				else:
@@ -96,6 +102,7 @@ def main():
 				if len(inds) <= 0:
 					passed = False
 					continue
+
 				else:
 					chosen_inds.append(inds)
 
